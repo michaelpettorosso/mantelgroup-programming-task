@@ -1,6 +1,6 @@
-﻿using LogReporter.Classes;
-using LogReporter.Extensions;
-using LogReporter.Interfaces;
+﻿using LogParser.Classes;
+using LogParser.Extensions;
+using LogParser.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,15 +14,15 @@ builder.Services.AddServices();
 
 using IHost host = builder.Build();
 
-var logParser = host.Services.GetRequiredService<ILogParser>();
+var logFileParser = host.Services.GetRequiredService<ILogFileParser>();
 
 var logReportOptions = new LogReportOptions();
 builder.Configuration.Bind(nameof(LogReportOptions), logReportOptions);
 
 var fileName = logReportOptions.FileName;
-logParser.ParseFile(fileName);
-logParser.ReportSummary();
-logParser.Report();
+logFileParser.ParseFile(fileName);
+logFileParser.ReportSummary();
+logFileParser.Report();
 
 await host.RunAsync();
 

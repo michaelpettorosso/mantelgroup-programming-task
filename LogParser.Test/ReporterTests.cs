@@ -1,8 +1,8 @@
-using LogReporter.Classes;
-using LogReporter.Interfaces;
+using LogParser.Classes;
+using LogParser.Interfaces;
 using Moq;
 
-namespace LogReporter.Test;
+namespace LogParser.Test;
 public class ReporterTests
 {
     private readonly Mock<IReporterOutput> mockReporterOutput = new();

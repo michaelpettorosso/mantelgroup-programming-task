@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LogReporter\LogReporter.csproj" />
+    <ProjectReference Include="..\LogReporter\LogParser.csproj" />
   </ItemGroup>
 
 </Project>

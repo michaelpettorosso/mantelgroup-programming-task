@@ -1,7 +1,7 @@
-using LogReporter.Helpers;
+using LogParser.Helpers;
 using System.Text.RegularExpressions;
 
-namespace LogReporter.Test;
+namespace LogParser.Test;
 public class RegExHelperTests
 {
     const string TestStringValue = nameof(TestStringValue);

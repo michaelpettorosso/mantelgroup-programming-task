@@ -1,6 +1,6 @@
-﻿using LogReporter.Models;
+﻿using LogParser.Models;
 
-namespace LogReporter.Extensions;
+namespace LogParser.Extensions;
 
 public static class ReportingExtensions {
     public static int NumberOfUniqueIpAddresses(this List<LogData> data) {

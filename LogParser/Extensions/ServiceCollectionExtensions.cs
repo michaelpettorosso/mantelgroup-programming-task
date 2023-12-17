@@ -1,17 +1,17 @@
-﻿using LogReporter.Classes;
-using LogReporter.Interfaces;
+﻿using LogParser.Classes;
+using LogParser.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace LogReporter.Extensions;
+namespace LogParser.Extensions;
 
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddSingleton<ILogFileManager, LogFileManager>();
-        services.AddSingleton<ILogParser, LogParser>();
+        services.AddSingleton<ILogFileParser, LogFileParser>();
         services.AddSingleton<IReporterOutput, ReporterOutput>();
         services.AddSingleton<IReporter, Reporter>();
         return services;

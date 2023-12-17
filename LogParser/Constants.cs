@@ -1,4 +1,4 @@
-﻿namespace LogReporter;
+﻿namespace LogParser;
 
 internal static class Constants
 {

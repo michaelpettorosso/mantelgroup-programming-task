@@ -1,7 +1,7 @@
-using LogReporter.Models;
-using static LogReporter.Extensions.ReportingExtensions;
+using LogParser.Models;
+using static LogParser.Extensions.ReportingExtensions;
 
-namespace LogReporter.Test;
+namespace LogParser.Test;
 public class ReportingExtensionsTests
 {
     public ReportingExtensionsTests()

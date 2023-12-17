@@ -1,4 +1,4 @@
-﻿namespace LogReporter.Classes;
+﻿namespace LogParser.Classes;
 public sealed class LogReportOptions
 {
     public string FileName { get; set; } = string.Empty;

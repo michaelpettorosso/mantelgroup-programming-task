@@ -1,6 +1,6 @@
-﻿using LogReporter.Interfaces;
+﻿using LogParser.Interfaces;
 
-namespace LogReporter.Classes
+namespace LogParser.Classes
 {
     internal class ReporterOutput : IReporterOutput
     {

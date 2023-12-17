@@ -1,4 +1,4 @@
-﻿namespace LogReporter.Interfaces;
+﻿namespace LogParser.Interfaces;
 
 public interface IReporter
 {

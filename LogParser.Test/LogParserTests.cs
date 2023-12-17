@@ -1,10 +1,10 @@
-using LogReporter.Classes;
-using LogReporter.Interfaces;
+using LogParser.Classes;
+using LogParser.Interfaces;
 using Microsoft.Extensions.Options;
 using Moq;
 using System.Text;
 
-namespace LogReporter.Test;
+namespace LogParser.Test;
 public class LogParserTests
 {
     private readonly Mock<ILogFileManager> mockLogFileManager = new();
@@ -17,7 +17,7 @@ public class LogParserTests
     private const string invalidLogFileRow2 = "192.168.1.1 - admin [17/Dec/2023:17:32:03 +1100] \"GET /asset.js HTTP/1.1\" 200 \"-\" \"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6\"\r\n";
     private const string emptyRow = "\r\n";
 
-    private readonly LogParser logParser;
+    private readonly LogFileParser logFileParser;
 
     private StreamReader CreateFileStream(string data)
     {
@@ -27,7 +27,7 @@ public class LogParserTests
     }
     public LogParserTests()
     {
-        logParser = new LogParser(mockLogFileManager.Object, mockReporter.Object, _reportOptions);
+        logFileParser = new LogFileParser(mockLogFileManager.Object, mockReporter.Object, _reportOptions);
     }
     [Fact]
     public void ParseFile_Should_Set_FileName()
@@ -39,11 +39,11 @@ public class LogParserTests
                        .Returns(() => CreateFileStream(""));
 
         //Act
-        logParser.ParseFile(fileName);
+        logFileParser.ParseFile(fileName);
 
         //Assert
-        Assert.NotNull(logParser.FileName);
-        Assert.Equal(fileName, logParser.FileName);
+        Assert.NotNull(logFileParser.FileName);
+        Assert.Equal(fileName, logFileParser.FileName);
     }
 
     [Theory]
@@ -64,12 +64,12 @@ public class LogParserTests
                        .Returns(() => CreateFileStream(logData));
 
         //Act
-        logParser.ParseFile(fileName);
+        logFileParser.ParseFile(fileName);
 
         //Assert
-        Assert.Equal(dataRecords, logParser.Data.Count);
-        Assert.Equal(lines, logParser.Lines);
-        Assert.Equal(emptyLines, logParser.EmptyLines.Count);
-        Assert.Equal(logErrors, logParser.LogErrors.Count);
+        Assert.Equal(dataRecords, logFileParser.Data.Count);
+        Assert.Equal(lines, logFileParser.Lines);
+        Assert.Equal(emptyLines, logFileParser.EmptyLines.Count);
+        Assert.Equal(logErrors, logFileParser.LogErrors.Count);
     }
 }

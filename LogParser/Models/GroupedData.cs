@@ -1,4 +1,4 @@
-﻿namespace LogReporter.Models;
+﻿namespace LogParser.Models;
 
 public record GroupedData
 { 

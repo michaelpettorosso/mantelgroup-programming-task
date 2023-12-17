@@ -1,8 +1,8 @@
-﻿using LogReporter.Models;
+﻿using LogParser.Models;
 
-namespace LogReporter.Interfaces;
+namespace LogParser.Interfaces;
 
-internal interface ILogParser
+internal interface ILogFileParser
 {
     public string FileName { get; }
     public int Lines { get; }

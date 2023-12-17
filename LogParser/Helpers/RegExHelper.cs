@@ -1,4 +1,4 @@
-﻿namespace LogReporter.Helpers;
+﻿namespace LogParser.Helpers;
 
 public static class RegExHelper
 {

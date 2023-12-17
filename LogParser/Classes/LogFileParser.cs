@@ -1,14 +1,14 @@
-﻿using LogReporter.Interfaces;
-using LogReporter.Models;
+﻿using LogParser.Interfaces;
+using LogParser.Models;
 using Microsoft.Extensions.Options;
 using System.Text;
 using System.Text.RegularExpressions;
-using static LogReporter.Helpers.RegExHelper;
-using static LogReporter.Extensions.ReportingExtensions;
+using static LogParser.Helpers.RegExHelper;
+using static LogParser.Extensions.ReportingExtensions;
 
-namespace LogReporter.Classes;
+namespace LogParser.Classes;
 
-public class LogParser(ILogFileManager logFileManager, IReporter reporter, IOptions<LogReportOptions> reportOptions) : ILogParser
+public class LogFileParser(ILogFileManager logFileManager, IReporter reporter, IOptions<LogReportOptions> reportOptions) : ILogFileParser
 {
     private readonly ILogFileManager _logFileManager = logFileManager;
     private readonly IReporter _reporter = reporter;

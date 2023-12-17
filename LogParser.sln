@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34407.89
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogReporter", "LogReporter\LogReporter.csproj", "{558D5079-9E85-4CCF-BA64-A664D04C1656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogParser", "LogReporter\LogParser.csproj", "{558D5079-9E85-4CCF-BA64-A664D04C1656}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogReporter.Test", "LogReporter.Test\LogReporter.Test.csproj", "{AE43722C-7354-4838-BF7D-A322CBA2D4B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogParser.Test", "LogReporter.Test\LogParser.Test.csproj", "{AE43722C-7354-4838-BF7D-A322CBA2D4B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
