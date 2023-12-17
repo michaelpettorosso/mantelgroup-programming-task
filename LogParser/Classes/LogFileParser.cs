@@ -144,7 +144,7 @@ public class LogFileParser(ILogFileManager logFileManager, IReporter reporter, I
         //Empty Lines ie. only whitespace 
         _reporter.Summary($"{EmptyLines.Count} empty line(s)");
         if (EmptyLines.Count > 0)
-            _reporter.Summary($"  on line(s) {string.Join(",", EmptyLines)}");
+            _reporter.Summary($"    on line(s) {string.Join(",", EmptyLines)}");
 
         //Log Errors
         _reporter.Summary($"{LogErrors.Count} line(s) with errors");
