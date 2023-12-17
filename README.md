@@ -80,7 +80,7 @@ Go to the root directory
 ```
   dotnet test
 ```
-
+![Test Screenshot](https://github.com/michaelpettorosso/mantelgroup-programming-task/blob/main/Tests.png?raw=true)
 
 ## Application Settings
 
