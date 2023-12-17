@@ -2,7 +2,9 @@
 # Mantel Group Programming Task
 LogParser
 
-C# .NET 8 Console Application
+C# .NET 8 Console Application 
+* LogParser
+* LogParser.Test (54 Tests)
 
 Can download latest SDK from here
 
