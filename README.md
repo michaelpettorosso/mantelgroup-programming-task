@@ -82,7 +82,7 @@ Go to the root directory
 
 ## Application Settings
 
-To run this project, you will can modify the appsettings.json in the LogParser directory
+To run this project, you can modify the appsettings.json in the LogParser directory
 
 ```
 "LogReportOptions": {
